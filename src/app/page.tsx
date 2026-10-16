@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   benefits,
   faqs,
@@ -42,7 +43,7 @@ function SectionHeading({
 }) {
   return (
     <div className="mx-auto max-w-2xl text-center">
-      <p className="text-sm font-semibold uppercase tracking-widest text-gold">{eyebrow}</p>
+      <p className="text-sm font-semibold uppercase tracking-widest text-earth">{eyebrow}</p>
       <h2 className="mt-2 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h2>
       {subtitle && <p className="mt-4 text-lg text-muted">{subtitle}</p>}
     </div>
@@ -54,10 +55,7 @@ function Header() {
     <header className="sticky top-0 z-50 border-b border-line/70 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <a href="#" className="flex items-center gap-3">
-          {/* Logo sementara: ganti dengan <Image> saat logo tersedia */}
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand font-arabic text-xl text-gold-soft">
-            ف
-          </span>
+          <Image src="/logo.png" alt="" width={371} height={428} priority className="h-10 w-auto" />
           <span className="leading-tight">
             <span className="block font-bold text-ink">{site.name}</span>
             <span lang="ar" dir="rtl" className="block font-arabic text-sm text-brand">
@@ -102,13 +100,21 @@ function Hero() {
           </div>
         </div>
         <div className="relative mx-auto w-full max-w-md">
-          <div className="rounded-3xl bg-brand p-10 text-center shadow-xl ring-8 ring-gold-soft">
-            <p lang="ar" dir="rtl" className="font-arabic text-5xl leading-relaxed text-gold-soft sm:text-6xl">
+          <div className="rounded-3xl bg-white p-10 text-center shadow-xl ring-8 ring-brand-soft">
+            <Image
+              src="/logo.png"
+              alt={`Logo ${site.name}`}
+              width={371}
+              height={428}
+              priority
+              className="mx-auto h-40 w-auto sm:h-48"
+            />
+            <p lang="ar" dir="rtl" className="mt-6 font-arabic text-4xl leading-relaxed text-brand sm:text-5xl">
               {site.nameArabic}
             </p>
-            <div className="mx-auto my-6 h-px w-24 bg-gold" />
-            <p className="text-xl font-semibold text-white">{site.name}</p>
-            <p className="mt-1 text-brand-soft">{site.tagline}</p>
+            <div className="mx-auto my-4 h-px w-24 bg-earth/40" />
+            <p className="text-xl font-semibold text-ink">{site.name}</p>
+            <p className="mt-1 text-earth">{site.tagline}</p>
           </div>
         </div>
       </div>
@@ -162,7 +168,7 @@ function Programs() {
         title="Program yang sedang berjalan"
         subtitle="Pilih program sesuai level dan kebutuhanmu."
       />
-      <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
         {programs.map((p) => (
           <article key={p.name} className="flex flex-col rounded-2xl border border-line bg-cream p-6">
             <span className="self-start rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
@@ -215,7 +221,7 @@ function Testimonials() {
         {testimonials.map((t, i) => (
           <figure key={i} className="rounded-2xl border border-line bg-cream p-6">
             <blockquote className="text-ink">
-              <span className="font-arabic text-4xl leading-none text-gold">“</span>
+              <span className="font-arabic text-4xl leading-none text-earth">“</span>
               <p className="-mt-2">{t.quote}</p>
             </blockquote>
             <figcaption className="mt-6 flex items-center gap-3">
@@ -272,6 +278,7 @@ function Footer() {
     <footer className="border-t border-line bg-white px-4 py-12 sm:px-6">
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
         <div>
+          <Image src="/logo.png" alt="" width={371} height={428} className="mb-3 h-12 w-auto" />
           <p className="font-bold text-ink">{site.name}</p>
           <p lang="ar" dir="rtl" className="font-arabic text-lg text-brand">
             {site.nameArabic}

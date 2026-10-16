@@ -9,12 +9,13 @@
 | Main goal / CTA | **Join the WhatsApp group** |
 | Page language | **Indonesian** (Arabic used only for the name and decorative text) |
 | Description | "Komunitas Belajar Bahasa Arab dari dasar hingga lancar. Belajar online." |
-| Programs | About 6 active programs. Placeholders for now; details _menyusul_ |
+| Programs | 4 listed: Nahwu (Tuhfatus Saniyyah), Baca Kitab (Tafsir As-Sa'di), Percakapan (Durusul Lughoh Jilid 2), Percakapan (Arobiyyah Baina Yadaik Jilid 2). Prices _menyusul_ |
 | Arabic name | **فصيح الفصحاء** |
 | Tagline | **"Dari dasar hingga lancar"** |
-| Logo & colors | _menyusul_. Using a text logo and a temporary palette for now |
+| Logo & colors | Logo in `public/logo.png`. Palette taken from the logo: green `#00532c`, brown `#5c3d0a` |
 | Social proof (stats, testimonials, teachers) | _menyusul_. Placeholders |
-| Contact & links (WA link, socials) | _menyusul_. Placeholders |
+| WhatsApp group | https://chat.whatsapp.com/BDFbYkBos804aG55HfmAb5 |
+| Contact & socials | _menyusul_. Placeholders |
 | Domain | None yet. Deploy to a temporary `*.vercel.app` URL |
 | Stack | Next.js (App Router) + Tailwind CSS, hosted on Vercel |
 

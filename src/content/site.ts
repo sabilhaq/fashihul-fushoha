@@ -9,8 +9,7 @@ export const site = {
   description:
     "Komunitas Belajar Bahasa Arab dari dasar hingga lancar. Belajar online, kapan saja dan dari mana saja.",
 
-  // PLACEHOLDER: ganti dengan link undangan grup WhatsApp (https://chat.whatsapp.com/...)
-  whatsappGroupUrl: "https://chat.whatsapp.com/PLACEHOLDER",
+  whatsappGroupUrl: "https://chat.whatsapp.com/BDFbYkBos804aG55HfmAb5",
 
   // PLACEHOLDER: nomor admin, format internasional tanpa "+" (contoh: 6281234567890)
   adminWhatsapp: "6280000000000",
@@ -35,7 +34,7 @@ export const nav = [
 // PLACEHOLDER: angka sementara
 export const stats = [
   { value: "1.000+", label: "Anggota" },
-  { value: "6", label: "Program aktif" },
+  { value: "4", label: "Program aktif" },
   { value: "20+", label: "Angkatan" },
   { value: "100%", label: "Online" },
 ];
@@ -67,7 +66,6 @@ export const benefits = [
   },
 ];
 
-// PLACEHOLDER: 6 program, detail menyusul
 export const programs = [
   {
     name: "Nahwu: Tuhfatus Saniyyah",
@@ -78,39 +76,25 @@ export const programs = [
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
-    name: "Program 2",
-    level: "Dasar",
-    description: "Deskripsi singkat program akan diisi. Cocok untuk pemula yang baru mulai belajar.",
-    schedule: "Jadwal menyusul",
-    price: "Gratis / Berbayar",
-  },
-  {
-    name: "Program 3",
+    name: "Baca Kitab: Tafsir As-Sa'di",
     level: "Menengah",
-    description: "Deskripsi singkat program akan diisi. Untuk yang sudah menguasai dasar-dasar.",
-    schedule: "Jadwal menyusul",
-    price: "Gratis / Berbayar",
+    description: "Program baca kitab membahas Tafsir As-Sa'di.",
+    schedule: "Ahad, 07.00–08.00 WIB",
+    price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
-    name: "Program 4",
+    name: "Percakapan: Durusul Lughoh Jilid 2",
     level: "Menengah",
-    description: "Deskripsi singkat program akan diisi. Untuk yang sudah menguasai dasar-dasar.",
-    schedule: "Jadwal menyusul",
-    price: "Gratis / Berbayar",
+    description: "Bahasa Arab percakapan membahas kitab Durusul Lughoh Jilid 2.",
+    schedule: "Selasa & Kamis, 06.00–07.00 WIB",
+    price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
-    name: "Program 5",
-    level: "Lanjutan",
-    description: "Deskripsi singkat program akan diisi. Untuk yang ingin lancar dan mendalam.",
-    schedule: "Jadwal menyusul",
-    price: "Gratis / Berbayar",
-  },
-  {
-    name: "Program 6",
-    level: "Lanjutan",
-    description: "Deskripsi singkat program akan diisi. Untuk yang ingin lancar dan mendalam.",
-    schedule: "Jadwal menyusul",
-    price: "Gratis / Berbayar",
+    name: "Percakapan: Arobiyyah Baina Yadaik Jilid 2",
+    level: "Menengah",
+    description: "Bahasa Arab percakapan membahas kitab Arobiyyah Baina Yadaik Jilid 2.",
+    schedule: "Senin, 16.00–16.30 WIB",
+    price: "Gratis / Berbayar", // PLACEHOLDER
   },
 ];
 

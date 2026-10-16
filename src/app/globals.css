@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
-/* Palet sementara: hijau tua + emas di atas krem. Ganti di sini saat warna brand sudah ada. */
+/* Palet dari logo: hijau #00532c dan cokelat #5c3d0a. */
 @theme inline {
-  --color-ink: #13261f;
-  --color-muted: #55665f;
-  --color-brand: #0f5c4c;
-  --color-brand-dark: #0a3f34;
-  --color-brand-soft: #e3efe9;
-  --color-gold: #c9a24a;
-  --color-gold-soft: #f4ead2;
-  --color-cream: #faf7f0;
-  --color-line: #e6dfcf;
+  --color-ink: #12241a;
+  --color-muted: #55635a;
+  --color-brand: #00532c;
+  --color-brand-dark: #003a1f;
+  --color-brand-soft: #e3efe7;
+  --color-earth: #5c3d0a;
+  --color-gold: #c9a063;
+  --color-gold-soft: #f3eadb;
+  --color-cream: #faf8f3;
+  --color-line: #e7e0d2;
   --color-wa: #25d366;
 
   --font-sans: var(--font-jakarta);
@@ -27,6 +28,6 @@ body {
 }
 
 .pattern-bg {
-  background-image: radial-gradient(circle at 1px 1px, rgb(201 162 74 / 0.25) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgb(92 61 10 / 0.12) 1px, transparent 0);
   background-size: 22px 22px;
 }
