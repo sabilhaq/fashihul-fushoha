@@ -5,6 +5,7 @@ export const site = {
   name: "Fashihul Fushoha",
   nameArabic: "فصيح الفصحاء",
   tagline: "Dari dasar hingga lancar",
+  copyrightYear: 2026,
   description:
     "Komunitas Belajar Bahasa Arab dari dasar hingga lancar. Belajar online, kapan saja dan dari mana saja.",
 
@@ -69,11 +70,12 @@ export const benefits = [
 // PLACEHOLDER: 6 program, detail menyusul
 export const programs = [
   {
-    name: "Program 1",
-    level: "Dasar",
-    description: "Deskripsi singkat program akan diisi. Cocok untuk pemula yang baru mulai belajar.",
-    schedule: "Jadwal menyusul",
-    price: "Gratis / Berbayar",
+    name: "Nahwu: Tuhfatus Saniyyah",
+    level: "Menengah",
+    description:
+      "Kajian ilmu nahwu membahas kitab Tuhfatus Saniyyah, syarah dari Matan Muqoddimah Jurumiyyah.",
+    schedule: "Sabtu, 06.00–07.00 WIB",
+    price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
     name: "Program 2",
