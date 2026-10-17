@@ -125,7 +125,7 @@ function Hero() {
 function Stats() {
   return (
     <section aria-label="Statistik komunitas" className="bg-brand-dark">
-      <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-10 text-center sm:px-6 md:grid-cols-4">
+      <dl className="mx-auto grid max-w-6xl grid-cols-3 gap-6 px-4 py-10 text-center sm:px-6">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col-reverse">
             <dt className="text-sm text-brand-soft">{s.label}</dt>

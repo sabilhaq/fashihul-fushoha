@@ -11,8 +11,8 @@ export const site = {
 
   whatsappGroupUrl: "https://chat.whatsapp.com/BDFbYkBos804aG55HfmAb5",
 
-  // PLACEHOLDER: nomor admin, format internasional tanpa "+" (contoh: 6281234567890)
-  adminWhatsapp: "6280000000000",
+  // Nomor admin, format internasional tanpa "+"
+  adminWhatsapp: "6285624617781",
   email: "admin@example.com", // PLACEHOLDER
 
   socials: [
@@ -31,11 +31,9 @@ export const nav = [
   { label: "FAQ", href: "#faq" },
 ];
 
-// PLACEHOLDER: angka sementara
 export const stats = [
-  { value: "1.000+", label: "Anggota" },
+  { value: "16", label: "Anggota" },
   { value: "4", label: "Program aktif" },
-  { value: "20+", label: "Angkatan" },
   { value: "100%", label: "Online" },
 ];
 
