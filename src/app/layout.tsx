@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Amiri, Plus_Jakarta_Sans } from "next/font/google";
 import { site } from "@/content/site";
 import "./globals.css";
@@ -15,6 +16,7 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fashihul-fushoha.vercel.app"),
   title: `${site.name}: ${site.tagline}`,
   description: site.description,
   openGraph: {
@@ -32,7 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${jakarta.variable} ${amiri.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

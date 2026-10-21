@@ -9,7 +9,8 @@
 | Main goal / CTA | **Join the WhatsApp group** |
 | Page language | **Indonesian** (Arabic used only for the name and decorative text) |
 | Description | "Komunitas Belajar Bahasa Arab dari dasar hingga lancar. Belajar online." |
-| Programs | 4 listed: Nahwu (Tuhfatus Saniyyah), Baca Kitab (Tafsir As-Sa'di), Percakapan (Durusul Lughoh Jilid 2), Percakapan (Arobiyyah Baina Yadaik Jilid 2). Prices _menyusul_ |
+| Programs | 6 listed. Dasar: Durusul Lughoh Jilid 1 (Sabtu ba'da Shubuh, Akh Dhafa), Arobiyyah Baina Yadaik Jilid 1 (Ahad ba'da Shubuh, Akh Naufal). Menengah: Nahwu (Tuhfatus Saniyyah), Baca Kitab (Tafsir As-Sa'di), Percakapan (Durusul Lughoh Jilid 2), Percakapan (Arobiyyah Baina Yadaik Jilid 2). Prices _menyusul_ |
+| Link preview & analytics | Static `src/app/opengraph-image.png`; Vercel Web Analytics via `@vercel/analytics` |
 | Arabic name | **فصيح الفصحاء** |
 | Tagline | **"Dari dasar hingga lancar"** |
 | Logo & colors | Logo in `public/logo.png`. Palette taken from the logo: green `#00532c`, brown `#5c3d0a` |

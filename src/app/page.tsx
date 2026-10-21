@@ -181,6 +181,12 @@ function Programs() {
                 <dt className="text-muted">Jadwal</dt>
                 <dd className="font-medium text-ink">{p.schedule}</dd>
               </div>
+              {p.teacher && (
+                <div className="flex justify-between gap-4">
+                  <dt className="text-muted">Pengajar</dt>
+                  <dd className="font-medium text-ink">{p.teacher}</dd>
+                </div>
+              )}
               <div className="flex justify-between gap-4">
                 <dt className="text-muted">Biaya</dt>
                 <dd className="font-medium text-ink">{p.price}</dd>

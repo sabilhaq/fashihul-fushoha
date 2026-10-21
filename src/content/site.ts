@@ -33,7 +33,7 @@ export const nav = [
 
 export const stats = [
   { value: "16", label: "Anggota" },
-  { value: "4", label: "Program aktif" },
+  { value: "6", label: "Program aktif" },
   { value: "100%", label: "Online" },
 ];
 
@@ -64,7 +64,32 @@ export const benefits = [
   },
 ];
 
-export const programs = [
+export type Program = {
+  name: string;
+  level: "Dasar" | "Menengah" | "Lanjutan";
+  description: string;
+  schedule: string;
+  teacher?: string;
+  price: string;
+};
+
+export const programs: Program[] = [
+  {
+    name: "Durusul Lughoh Jilid 1",
+    level: "Dasar",
+    description: "Belajar bahasa Arab dari dasar dengan kitab Durusul Lughoh Jilid 1.",
+    schedule: "Sabtu, ba'da Shubuh",
+    teacher: "Akh Dhafa",
+    price: "Gratis / Berbayar", // PLACEHOLDER
+  },
+  {
+    name: "Arobiyyah Baina Yadaik Jilid 1",
+    level: "Dasar",
+    description: "Belajar bahasa Arab dari dasar dengan kitab Arobiyyah Baina Yadaik Jilid 1.",
+    schedule: "Ahad, ba'da Shubuh",
+    teacher: "Akh Naufal",
+    price: "Gratis / Berbayar", // PLACEHOLDER
+  },
   {
     name: "Nahwu: Tuhfatus Saniyyah",
     level: "Menengah",
