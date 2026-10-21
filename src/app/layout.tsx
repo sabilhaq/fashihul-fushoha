@@ -16,7 +16,7 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fashihul-fushoha.vercel.app"),
+  metadataBase: new URL(site.url),
   title: `${site.name}: ${site.tagline}`,
   description: site.description,
   openGraph: {

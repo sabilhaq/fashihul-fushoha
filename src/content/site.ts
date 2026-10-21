@@ -3,6 +3,7 @@
 
 export const site = {
   name: "Fashihul Fushoha",
+  url: "https://fashihul-fushoha.vercel.app", // ganti saat domain sudah ada
   nameArabic: "فصيح الفصحاء",
   tagline: "Dari dasar hingga lancar",
   copyrightYear: 2026,
@@ -26,6 +27,7 @@ export const site = {
 export const nav = [
   { label: "Tentang", href: "#tentang" },
   { label: "Program", href: "#program" },
+  { label: "Jadwal", href: "#jadwal" },
   { label: "Metode", href: "#metode" },
   { label: "Testimoni", href: "#testimoni" },
   { label: "FAQ", href: "#faq" },
@@ -64,11 +66,15 @@ export const benefits = [
   },
 ];
 
+export const days = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Ahad"] as const;
+export type Day = (typeof days)[number];
+
 export type Program = {
   name: string;
   level: "Dasar" | "Menengah" | "Lanjutan";
   description: string;
-  schedule: string;
+  days: Day[];
+  time: string; // "HH.MM–HH.MM WIB" atau "ba'da Shubuh"
   teacher?: string;
   price: string;
 };
@@ -78,7 +84,8 @@ export const programs: Program[] = [
     name: "Durusul Lughoh Jilid 1",
     level: "Dasar",
     description: "Belajar bahasa Arab dari dasar dengan kitab Durusul Lughoh Jilid 1.",
-    schedule: "Sabtu, ba'da Shubuh",
+    days: ["Sabtu"],
+    time: "ba'da Shubuh",
     teacher: "Akh Dhafa",
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
@@ -86,7 +93,8 @@ export const programs: Program[] = [
     name: "Arobiyyah Baina Yadaik Jilid 1",
     level: "Dasar",
     description: "Belajar bahasa Arab dari dasar dengan kitab Arobiyyah Baina Yadaik Jilid 1.",
-    schedule: "Ahad, ba'da Shubuh",
+    days: ["Ahad"],
+    time: "ba'da Shubuh",
     teacher: "Akh Naufal",
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
@@ -95,28 +103,32 @@ export const programs: Program[] = [
     level: "Menengah",
     description:
       "Kajian ilmu nahwu membahas kitab Tuhfatus Saniyyah, syarah dari Matan Muqoddimah Jurumiyyah.",
-    schedule: "Sabtu, 06.00–07.00 WIB",
+    days: ["Sabtu"],
+    time: "06.00–07.00 WIB",
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
     name: "Baca Kitab: Tafsir As-Sa'di",
     level: "Menengah",
     description: "Program baca kitab membahas Tafsir As-Sa'di.",
-    schedule: "Ahad, 07.00–08.00 WIB",
+    days: ["Ahad"],
+    time: "07.00–08.00 WIB",
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
     name: "Percakapan: Durusul Lughoh Jilid 2",
     level: "Menengah",
     description: "Bahasa Arab percakapan membahas kitab Durusul Lughoh Jilid 2.",
-    schedule: "Selasa & Kamis, 06.00–07.00 WIB",
+    days: ["Selasa", "Kamis"],
+    time: "06.00–07.00 WIB",
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
   {
     name: "Percakapan: Arobiyyah Baina Yadaik Jilid 2",
     level: "Menengah",
     description: "Bahasa Arab percakapan membahas kitab Arobiyyah Baina Yadaik Jilid 2.",
-    schedule: "Senin, 16.00–16.30 WIB",
+    days: ["Senin"],
+    time: "16.00–16.30 WIB",
     price: "Gratis / Berbayar", // PLACEHOLDER
   },
 ];

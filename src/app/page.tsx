@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {
   benefits,
+  days,
   faqs,
   nav,
   programs,
@@ -8,7 +9,18 @@ import {
   stats,
   steps,
   testimonials,
+  type Program,
 } from "@/content/site";
+
+function formatSchedule(p: Program) {
+  return `${p.days.join(" & ")}, ${p.time}`;
+}
+
+// "ba'da Shubuh" diurutkan paling awal
+function startMinutes(time: string) {
+  const m = time.match(/^(\d{2})\.(\d{2})/);
+  return m ? Number(m[1]) * 60 + Number(m[2]) : 0;
+}
 
 function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
@@ -179,7 +191,7 @@ function Programs() {
             <dl className="mt-6 space-y-1 border-t border-line pt-4 text-sm">
               <div className="flex justify-between gap-4">
                 <dt className="text-muted">Jadwal</dt>
-                <dd className="font-medium text-ink">{p.schedule}</dd>
+                <dd className="text-right font-medium text-ink">{formatSchedule(p)}</dd>
               </div>
               {p.teacher && (
                 <div className="flex justify-between gap-4">
@@ -198,6 +210,46 @@ function Programs() {
       <p className="mt-10 text-center text-muted">
         Info pendaftaran tiap program dibagikan di grup WhatsApp.
       </p>
+    </section>
+  );
+}
+
+function Schedule() {
+  return (
+    <section id="jadwal" className="scroll-mt-20 px-4 py-20 sm:px-6">
+      <SectionHeading
+        eyebrow="Jadwal Pekanan"
+        title="Kelas setiap pekan"
+        subtitle="Semua waktu dalam WIB. Kelas berlangsung online."
+      />
+      <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {days.map((day) => {
+          const classes = programs
+            .filter((p) => p.days.includes(day))
+            .sort((a, b) => startMinutes(a.time) - startMinutes(b.time));
+          return (
+            <div key={day} className="rounded-2xl border border-line bg-white p-5">
+              <h3 className="font-bold text-brand">{day}</h3>
+              {classes.length === 0 ? (
+                <p className="mt-3 text-sm text-muted">Tidak ada kelas</p>
+              ) : (
+                <ul className="mt-3 space-y-3">
+                  {classes.map((p) => (
+                    <li key={p.name} className="border-l-2 border-gold pl-3">
+                      <p className="text-sm font-semibold text-earth">{p.time}</p>
+                      <p className="text-sm font-medium text-ink">{p.name}</p>
+                      <p className="text-xs text-muted">
+                        {p.level}
+                        {p.teacher && ` · ${p.teacher}`}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
@@ -335,6 +387,7 @@ export default function Home() {
         <Stats />
         <About />
         <Programs />
+        <Schedule />
         <Method />
         <Testimonials />
         <Faq />
